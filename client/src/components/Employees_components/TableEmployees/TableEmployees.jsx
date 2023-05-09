@@ -12,7 +12,7 @@ import {
   Title,
   Badge,
 } from "@tremor/react";
-import style from "./TableEmployees.module.css";
+
 
 export const TableEmployees = () => {
   const data = [
@@ -65,11 +65,11 @@ export const TableEmployees = () => {
 
   return (
     <Card className="border-2 w5/5 h-screen ">
-      <div className="border-2 border-yellow-500 flex justify-between items-center mt-2 ">
+      <div className="border-2 border-yellow-500 flex justify-between items-center m-4 ">
         <Title className="border-2 border-yellow-500">Employees</Title>
         <button className="border-2 border-yellow-500">aaaaaaaaaa</button>
       </div>
-      <Table className="border-2 flex justify-between items-center mt-5 ">
+      <Table className="border-2 flex justify-between items-center m-4  ">
         <TableHead className="border-2 border-yellow-500">
           <TableRow className="border-2 border-green-500">
             <TableHeaderCell>Name</TableHeaderCell>
@@ -79,19 +79,20 @@ export const TableEmployees = () => {
           </TableRow>
         </TableHead>
         <TableBody>
+
+
           {data.map((item) => (
-            <TableRow key={item.name} className="border-2">
-              <div>
-              {/* bg-[#39394B] */}
-                <TableCell className="">
-                  <div className="flex flex-row justify-center items-center">
+            <TableRow key={item.name} className="border-2 bg-black space-x-2">
+
+                <TableCell className="flex flex-row justify-center items-center m-5 p-4 ">
+                  {/* <div className="flex flex-row justify-center items-center"> */}
                   <img
                     className="w-7 rounded-full"
                     src={item.image}
                     alt="avatar image"
                   />
-                  <Text className="text-center">{item.name}</Text>
-                  </div>
+                  <Text className="text-center ">{item.name}</Text>
+                  {/* </div> */}
                 </TableCell>
                 <TableCell>
                   <Text className="text-center">{item.mail}</Text>
@@ -107,9 +108,10 @@ export const TableEmployees = () => {
                     {item.status}
                   </Badge>
                 </TableCell>
-              </div>
+
             </TableRow>
           ))}
+            
         </TableBody>
       </Table>
     </Card>
