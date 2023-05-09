@@ -5,11 +5,19 @@
   align-items: start;
   justify-content: space-between;
   flex-direction: row;
+  
   width: 100%;
   height: 100vh;
 }
 .container h1 {
   margin: 30px;
+}
+
+.divEmployees {
+  width: 80%;
+}
+.divDetail {
+  width: 20%;
 }
 
 .lista {

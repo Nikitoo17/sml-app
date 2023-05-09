@@ -5,8 +5,8 @@ let data = [
     phone: "11-5566-8899",
     position: "Corredor",
     color: "green",
-    extra: "...",
-  },
-];
+    extra: "..."
+  }
+]
 
 export default data;
